@@ -17,10 +17,115 @@
   box-sizing: inherit;
 }
 
+body {
+  font-family: "Epilogue", system-ui;
+  font-optical-sizing: auto;
+  line-height: 1.75;
+  color: var(--oxford-blue);
+  background-color: var(--isabelline);
+}
+
+::selection {
+  color: var(--isabelline);
+  background-color: var(--medium-slate-blue);
+}
+
+h1, h2, h3, h4 {
+  font-weight: inherit;
+}
+
+.body {
+  letter-spacing: 0.005625rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.heading-xl {
+  font-size: 2.375rem;
+  line-height: 1.1578947368;
+}
+
+.heading-l {
+  font-size: 3rem;
+  line-height: 1.1666666667;
+}
+
+.heading-m,
+.heading-s {
+  text-transform: uppercase;
+}
+
+.heading-m {
+  font-size: 1.125rem;
+  line-height: 1.7777777778;
+  letter-spacing: -0.01125rem;
+}
+
+.heading-s {
+  font-size: 1rem;
+  line-height: 1.625;
+  letter-spacing: 0.15625rem;
+}
+
+.heading-i {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02625rem;
+}
+
+.quote {
+  font-size: 1.125rem;
+  line-height: 1.7777777778;
+  letter-spacing: 0.005625rem;
+}
+
+footer {
+  font-size: 0.9375rem;
+  line-height: 2.1333333333;
+  letter-spacing: 0.005rem;
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
     transition-duration: 0s !important;
+  }
+}
+@media (width >= 48rem) {
+  .heading-xl {
+    font-size: 3.5rem;
+    line-height: 1.1428571429;
+    letter-spacing: -0.04875rem;
+  }
+}
+@media (width >= 90rem) {
+  body {
+    font-size: 1.125rem;
+    line-height: 1.7777777778;
+  }
+  .body {
+    letter-spacing: 0.00625rem;
+  }
+  .heading-xl {
+    font-size: 4.5rem;
+    line-height: 1.0833333333;
+    letter-spacing: -0.00625rem;
+  }
+  .heading-l {
+    font-size: 3rem;
+    line-height: 1.1666666667;
+    letter-spacing: -0.03125rem;
+  }
+  .heading-i {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+  .quote {
+    font-size: 1.25rem;
+    line-height: 1.75;
+    letter-spacing: 0.006875rem;
   }
 }
 

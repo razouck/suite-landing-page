@@ -22,11 +22,169 @@
 	box-sizing : inherit;
 }
 
+body
+{
+	font-family         : "Epilogue", system-ui;
+	font-optical-sizing : auto;
+	line-height         : ratio(28, 16);
+	color               : var(--oxford-blue);
+	background-color    : var(--isabelline);
+}
+
+::selection
+{
+	color            : var(--isabelline);
+	background-color : var(--medium-slate-blue);
+}
+
+
+// Typography -------------------------------------------------------------------
+
+h1, h2, h3, h4
+{
+	font-weight : inherit;
+}
+
+.body
+{
+	letter-spacing : toRem(0.09);
+}
+
+.bold
+{
+	font-weight : bold;
+}
+
+.heading-xl
+{
+	font-size   : toRem(38);
+	line-height : ratio(44, 38);
+}
+
+.heading-l
+{
+	font-size   : toRem(48);
+	line-height : ratio(56, 48);
+}
+
+.heading-m,
+.heading-s
+{
+	text-transform : uppercase;
+}
+
+.heading-m
+{
+	font-size      : toRem(18);
+	line-height    : ratio(32, 18);
+	letter-spacing : toRem(-0.18);
+}
+
+.heading-s
+{
+	font-size      : toRem(16);
+	line-height    : ratio(26, 16);
+	letter-spacing : toRem(2.5);
+}
+
+.heading-i
+{
+	font-size      : toRem(40);
+	line-height    : ratio(48, 40);
+	letter-spacing : toRem(-0.42);
+}
+
+.quote
+{
+	font-size      : toRem(18);
+	line-height    : ratio(32, 18);
+	letter-spacing : toRem(0.09);
+}
+
+
+// Footer -----------------------------------------------------------------------
+
+footer
+{
+	font-size      : toRem(15);
+	line-height    : ratio(32, 15);
+	letter-spacing : toRem(0.08);
+}
+
+
+// Animation --------------------------------------------------------------------
+
 @media (prefers-reduced-motion : reduce)
 {
 	*
 	{
 		animation           : none !important;
 		transition-duration : 0s !important;
+	}
+}
+
+
+// ------------------------------------------------------------------------------
+// Tablet -----------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+
+@media (width >= toRem(768))
+{
+	// Typography ---------------------------------------------------------------
+
+	.heading-xl
+	{
+		font-size      : toRem(56);
+		line-height    : ratio(64, 56);
+		letter-spacing : toRem(-0.78);
+	}
+}
+
+
+// ------------------------------------------------------------------------------
+// Desktop ----------------------------------------------------------------------
+// ------------------------------------------------------------------------------
+
+@media (width >= toRem(1440))
+{
+	body
+	{
+		font-size   : toRem(18);
+		line-height : ratio(32, 18);
+	}
+
+
+	// Typography ---------------------------------------------------------------
+
+	.body
+	{
+		letter-spacing : toRem(0.1);
+	}
+
+	.heading-xl
+	{
+		font-size      : toRem(72);
+		line-height    : ratio(78, 72);
+		letter-spacing : toRem(-0.1);
+	}
+
+	.heading-l
+	{
+		font-size      : toRem(48);
+		line-height    : ratio(56, 48);
+		letter-spacing : toRem(-0.5);
+	}
+
+	.heading-i
+	{
+		font-size   : toRem(40);
+		line-height : ratio(48, 40);
+	}
+
+	.quote
+	{
+		font-size      : toRem(20);
+		line-height    : ratio(35, 20);
+		letter-spacing : toRem(0.11);
 	}
 }
