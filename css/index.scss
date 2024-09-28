@@ -2,7 +2,15 @@
 
 :root
 {
-	box-sizing         : border-box;
+	--oxford-blue       : hsla(219, 43%, 16%, 1);
+	--paynes-gray       : hsla(218, 20%, 36%, 1);
+	--isabelline        : hsla(30, 33%, 93%, 1);
+	--seasalt           : hsla(30, 29%, 97%, 1);
+	--medium-slate-blue : hsla(264, 100%, 69%, 1);
+	--steel-pink        : hsla(292, 76%, 54%, 1);
+	--sandy-brown       : hsla(31, 100%, 65%, 1);
+
+	box-sizing          : border-box;
 }
 
 *,
