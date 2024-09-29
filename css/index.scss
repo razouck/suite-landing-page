@@ -37,6 +37,18 @@ body
 	background-color : var(--medium-slate-blue);
 }
 
+img
+{
+	font-style        : italic;
+	vertical-align    : middle;
+	max-inline-size   : 100%;
+	block-size        : auto;
+	shape-margin      : 1rem;
+	background-repeat : no-repeat;
+	background-size   : cover;
+	user-select       : none;
+}
+
 
 // Typography -------------------------------------------------------------------
 
@@ -103,6 +115,30 @@ h1, h2, h3, h4
 }
 
 
+// Navigation -------------------------------------------------------------------
+
+nav > ul
+{
+	display    : flex;
+	list-style : none;
+}
+
+header nav > ul
+{
+	justify-content : space-between;
+}
+
+footer nav > ul
+{
+	column-gap : toRem(28);
+
+	> li > a:active
+	{
+		opacity : 0.5;
+	}
+}
+
+
 // Footer -----------------------------------------------------------------------
 
 footer
@@ -130,6 +166,7 @@ footer
 	border              : 2px solid;
 	border-radius       : toRem(6);
 	transition          : all 100ms ease-in-out;
+	user-select         : none;
 
 	&:active
 	{
@@ -144,7 +181,6 @@ footer
 	syntax        : "<number>";
 	initial-value : 0;
 	inherits      : false;
-
 }
 
 .button.primary
