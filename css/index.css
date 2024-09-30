@@ -22,11 +22,11 @@ body {
   font-optical-sizing: auto;
   line-height: 1.75;
   color: var(--oxford-blue);
-  background-color: var(--isabelline);
+  background-color: var(--seasalt);
 }
 
 ::selection {
-  color: var(--isabelline);
+  color: var(--seasalt);
   background-color: var(--medium-slate-blue);
 }
 
@@ -95,6 +95,7 @@ h1, h2, h3, h4 {
 
 nav > ul {
   display: flex;
+  align-items: center;
   list-style: none;
 }
 
@@ -109,10 +110,109 @@ footer nav > ul > li > a:active {
   opacity: 0.5;
 }
 
+.logo {
+  position: relative;
+  top: 0.3125rem;
+}
+
+header {
+  padding-inline: 1rem;
+  max-inline-size: 23.4375rem;
+  margin-inline: auto;
+}
+header nav {
+  padding-block-start: 1.5rem;
+}
+header h1 {
+  margin-block-start: 5.625rem;
+}
+header p {
+  margin-block-start: 1.9375rem;
+}
+header > .button {
+  margin-block-start: 2.125rem;
+}
+header > .button {
+  margin-block-end: 3.5rem;
+}
+header > ul {
+  text-align: center;
+  margin-block-start: 3.4375rem;
+  list-style: none;
+}
+header > ul > li + li {
+  margin-block-start: 2rem;
+}
+header .heading-s {
+  margin-block-start: 0.0625rem;
+}
+header .curve {
+  position: relative;
+}
+header .curve::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: -1.5rem;
+  inline-size: 9.625rem;
+  block-size: 1.25rem;
+  background-image: url("../assets/pattern-curved-line-1.svg");
+  background-size: 100%;
+}
+
+main > div {
+  text-align: center;
+  position: relative;
+  max-inline-size: 23.4375rem;
+  padding-inline: 1rem;
+  padding-block-start: 15.9375rem;
+  padding-block-end: 4rem;
+  margin-inline: auto;
+  margin-block-start: 14.875rem;
+  color: var(--seasalt);
+  background-color: var(--oxford-blue);
+  border-radius: 0.9375rem;
+}
+main > div picture {
+  position: absolute;
+  inset-block-start: -10.875rem;
+  inset-inline: 0;
+}
+main > div .arrow {
+  transform: scale(0.76);
+}
+main > div .quote {
+  margin-block-start: 2.375rem;
+}
+main > div figcaption {
+  margin-block-start: 2.5rem;
+}
+main > div .heading-i {
+  margin-block-start: 1.3125rem;
+}
+
 footer {
   font-size: 0.9375rem;
   line-height: 2.1333333333;
   letter-spacing: 0.005rem;
+  text-align: center;
+  padding-block-start: 11.5625rem;
+  padding-block-end: 4.25rem;
+  margin-block-start: -8.375rem;
+  background-color: var(--isabelline);
+}
+footer > * + * {
+  margin-block-start: 2.0625rem;
+}
+footer > nav {
+  margin-block-start: 2rem;
+}
+footer > nav > ul > li:first-child {
+  margin-inline-start: auto;
+}
+footer > nav > ul > li:last-child {
+  margin-inline-end: auto;
 }
 
 .button {
@@ -158,6 +258,10 @@ footer {
 }
 .button.primary:active {
   --i: 1;
+}
+
+.lighter {
+  color: var(--paynes-gray);
 }
 
 @media (prefers-reduced-motion: reduce) {

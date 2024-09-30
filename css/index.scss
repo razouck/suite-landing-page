@@ -28,12 +28,12 @@ body
 	font-optical-sizing : auto;
 	line-height         : ratio(28, 16);
 	color               : var(--oxford-blue);
-	background-color    : var(--isabelline);
+	background-color    : var(--seasalt);
 }
 
 ::selection
 {
-	color            : var(--isabelline);
+	color            : var(--seasalt);
 	background-color : var(--medium-slate-blue);
 }
 
@@ -119,8 +119,9 @@ h1, h2, h3, h4
 
 nav > ul
 {
-	display    : flex;
-	list-style : none;
+	display     : flex;
+	align-items : center;
+	list-style  : none;
 }
 
 header nav > ul
@@ -138,14 +139,160 @@ footer nav > ul
 	}
 }
 
+.logo
+{
+	position : relative;
+	top      : toRem(5);
+}
+
+
+// Header -----------------------------------------------------------------------
+
+header
+{
+	padding-inline  : toRem(16);
+	max-inline-size : toRem(375);
+	margin-inline   : auto;
+
+	nav
+	{
+		padding-block-start : toRem(24);
+	}
+
+	h1
+	{
+		margin-block-start : toRem(90);
+	}
+
+	p
+	{
+		margin-block-start : toRem(31);
+	}
+
+	> .button
+	{
+		margin-block-start : toRem(34);
+	}
+
+	> .button
+	{
+		margin-block-end : toRem(56);
+	}
+
+	> ul
+	{
+		text-align         : center;
+		margin-block-start : toRem(55);
+		list-style         : none;
+	}
+
+	> ul > li + li
+	{
+		margin-block-start : toRem(32);
+	}
+
+	.heading-s
+	{
+		margin-block-start : toRem(1);
+	}
+
+	.curve
+	{
+		position : relative;
+	}
+
+	.curve::after
+	{
+		content            : "";
+		display            : block;
+		position           : absolute;
+		inset-inline-start : 0;
+		inset-block-start  : toRem(-24);
+		inline-size        : toRem(154);
+		block-size         : toRem(20);
+		background-image   : url("../assets/pattern-curved-line-1.svg");
+		background-size    : 100%;
+	}
+}
+
+
+// Main -------------------------------------------------------------------------
+
+main > div
+{
+	text-align          : center;
+	position            : relative;
+	max-inline-size     : toRem(375);
+	padding-inline      : toRem(16);
+	padding-block-start : toRem(255);
+	padding-block-end   : toRem(64);
+	margin-inline       : auto;
+	margin-block-start  : toRem(238);
+	color               : var(--seasalt);
+	background-color    : var(--oxford-blue);
+	border-radius       : toRem(15);
+
+	picture
+	{
+		position          : absolute;
+		inset-block-start : toRem(-174);
+		inset-inline      : 0;
+	}
+
+	.arrow
+	{
+		transform : scale(0.76);
+	}
+
+	.quote
+	{
+		margin-block-start : toRem(38);
+	}
+
+	figcaption
+	{
+		margin-block-start : toRem(40);
+	}
+
+	.heading-i
+	{
+		margin-block-start : toRem(21);
+	}
+}
+
 
 // Footer -----------------------------------------------------------------------
 
 footer
 {
-	font-size      : toRem(15);
-	line-height    : ratio(32, 15);
-	letter-spacing : toRem(0.08);
+	font-size           : toRem(15);
+	line-height         : ratio(32, 15);
+	letter-spacing      : toRem(0.08);
+	text-align          : center;
+	padding-block-start : toRem(185);
+	padding-block-end   : toRem(68);
+	margin-block-start  : toRem(-134);
+	background-color    : var(--isabelline);
+
+	> * + *
+	{
+		margin-block-start : toRem(33);
+	}
+
+	> nav
+	{
+		margin-block-start : toRem(32);
+	}
+
+	> nav > ul > li:first-child
+	{
+		margin-inline-start : auto;
+	}
+
+	> nav > ul > li:last-child
+	{
+		margin-inline-end : auto;
+	}
 }
 
 
@@ -203,6 +350,12 @@ footer
 	{
 		--i : 1;
 	}
+}
+
+
+.lighter
+{
+	color : var(--paynes-gray);
 }
 
 
