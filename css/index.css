@@ -146,6 +146,9 @@ header > ul > li + li {
 header .heading-s {
   margin-block-start: 0.0625rem;
 }
+header .curve {
+  position: absolute;
+}
 
 main > div {
   text-align: center;
@@ -278,6 +281,7 @@ footer > nav > ul > li:last-child {
     display: grid;
     grid-template-columns: auto 17.5625rem;
     justify-items: start;
+    position: relative;
     padding-inline: 2.5rem;
   }
   header > * {
@@ -327,6 +331,11 @@ footer > nav > ul > li:last-child {
     grid-column-start: 2;
     grid-column-end: span 1;
     z-index: -1;
+  }
+  header .curve {
+    inset-inline-start: 12.3125rem;
+    inset-block-start: 13.375rem;
+    transform: scale(0.8);
   }
   main {
     padding-inline: 2.5rem;

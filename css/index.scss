@@ -195,6 +195,11 @@ header
 	{
 		margin-block-start : toRem(1);
 	}
+
+	.curve
+	{
+		position : absolute;
+	}
 }
 
 
@@ -396,6 +401,7 @@ footer
 		display               : grid;
 		grid-template-columns : auto toRem(281);
 		justify-items         : start;
+		position              : relative;
 		padding-inline        : toRem(40);
 
 		> *
@@ -464,6 +470,13 @@ footer
 			grid-column-start : 2;
 			grid-column-end   : span 1;
 			z-index           : -1;
+		}
+
+		.curve
+		{
+			inset-inline-start : toRem(197);
+			inset-block-start  : toRem(214);
+			transform          : scale(0.8);
 		}
 	}
 
