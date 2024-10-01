@@ -146,20 +146,6 @@ header > ul > li + li {
 header .heading-s {
   margin-block-start: 0.0625rem;
 }
-header .curve {
-  position: relative;
-}
-header .curve::after {
-  content: "";
-  display: block;
-  position: absolute;
-  inset-inline-start: 0;
-  inset-block-start: -1.5rem;
-  inline-size: 9.625rem;
-  block-size: 1.25rem;
-  background-image: url("../assets/pattern-curved-line-1.svg");
-  background-size: 100%;
-}
 
 main > div {
   text-align: center;
@@ -173,6 +159,9 @@ main > div {
   color: var(--seasalt);
   background-color: var(--oxford-blue);
   border-radius: 0.9375rem;
+  background-image: url("../assets/pattern-blur.svg");
+  background-position: 50% -140%;
+  background-repeat: no-repeat;
 }
 main > div picture {
   position: absolute;
@@ -271,15 +260,111 @@ footer > nav > ul > li:last-child {
   }
 }
 @media (width >= 48rem) {
+  header,
+  main,
+  footer {
+    max-inline-size: 48rem;
+    margin-inline: auto;
+  }
   .heading-xl {
     font-size: 3.5rem;
     line-height: 1.1428571429;
     letter-spacing: -0.04875rem;
   }
+  .logo {
+    top: 0.0625rem;
+  }
+  header {
+    display: grid;
+    grid-template-columns: auto 17.5625rem;
+    justify-items: start;
+    padding-inline: 2.5rem;
+  }
+  header > * {
+    grid-column-start: 1;
+    grid-column-end: span 2;
+  }
+  header nav,
+  header h1,
+  header p,
+  header > .button {
+    grid-row-end: span 1;
+  }
+  header nav,
+  header > ul {
+    justify-self: stretch;
+  }
+  header nav {
+    grid-row-start: 1;
+    padding-block-start: 2.5rem;
+    margin-block-end: 4.875rem;
+  }
+  header h1,
+  header picture {
+    grid-row-start: 2;
+  }
+  header p {
+    grid-row-start: 3;
+    max-inline-size: 40ch;
+    margin-block-start: 2.375rem;
+  }
+  header > .button {
+    grid-row-start: 4;
+    margin-block-start: 2.5625rem;
+  }
+  header > ul {
+    display: flex;
+    justify-self: stretch;
+    justify-content: space-around;
+    grid-row-start: 5;
+    margin-block-start: 4.5rem;
+  }
+  header > ul > li + li {
+    margin-block-start: unset;
+  }
+  header picture {
+    grid-row-end: span 4;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    z-index: -1;
+  }
+  main {
+    padding-inline: 2.5rem;
+  }
+  main > div {
+    max-inline-size: unset;
+    padding-inline: 3.625rem;
+    padding-block-start: 15.9375rem;
+    margin-block-start: 17.125rem;
+  }
+  footer {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2.5rem;
+    padding-block-start: 33.4375rem;
+    padding-block-end: 4.5625rem;
+    margin-block-start: -29rem;
+  }
+  footer > * + * {
+    margin-block-start: unset;
+  }
+  footer > nav {
+    position: relative;
+    inset-block-start: 0.5rem;
+    margin-block-start: unset;
+  }
+  footer > nav > ul > li:first-child {
+    margin-inline-start: unset;
+  }
+  footer > nav > ul > li:last-child {
+    margin-inline-end: unset;
+  }
   .button {
     font-size: 1rem;
     line-height: 2;
     letter-spacing: -0.01rem;
+    padding-block-start: 0.625rem;
+    padding-block-end: 0.75rem;
     padding-inline: 1.5rem;
   }
 }

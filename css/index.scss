@@ -195,24 +195,6 @@ header
 	{
 		margin-block-start : toRem(1);
 	}
-
-	.curve
-	{
-		position : relative;
-	}
-
-	.curve::after
-	{
-		content            : "";
-		display            : block;
-		position           : absolute;
-		inset-inline-start : 0;
-		inset-block-start  : toRem(-24);
-		inline-size        : toRem(154);
-		block-size         : toRem(20);
-		background-image   : url("../assets/pattern-curved-line-1.svg");
-		background-size    : 100%;
-	}
 }
 
 
@@ -231,6 +213,9 @@ main > div
 	color               : var(--seasalt);
 	background-color    : var(--oxford-blue);
 	border-radius       : toRem(15);
+	background-image    : url("../assets/pattern-blur.svg");
+	background-position : 50% -140%;
+	background-repeat   : no-repeat;
 
 	picture
 	{
@@ -377,6 +362,15 @@ footer
 
 @media (width >= toRem(768))
 {
+	header,
+	main,
+	footer
+	{
+		max-inline-size : toRem(768);
+		margin-inline   : auto;
+	}
+
+
 	// Typography ---------------------------------------------------------------
 
 	.heading-xl
@@ -387,14 +381,154 @@ footer
 	}
 
 
+	// Navigation ---------------------------------------------------------------
+
+	.logo
+	{
+		top : toRem(1);
+	}
+
+
+	// Header -------------------------------------------------------------------
+
+	header
+	{
+		display               : grid;
+		grid-template-columns : auto toRem(281);
+		justify-items         : start;
+		padding-inline        : toRem(40);
+
+		> *
+		{
+			grid-column-start : 1;
+			grid-column-end   : span 2;
+		}
+
+		nav,
+		h1,
+		p,
+		> .button
+		{
+			grid-row-end : span 1;
+		}
+
+		nav,
+		> ul
+		{
+			justify-self : stretch;
+		}
+
+		nav
+		{
+			grid-row-start      : 1;
+			padding-block-start : toRem(40);
+			margin-block-end    : toRem(78);
+		}
+
+		h1,
+		picture
+		{
+			grid-row-start : 2;
+		}
+
+		p
+		{
+			grid-row-start     : 3;
+			max-inline-size    : 40ch;
+			margin-block-start : toRem(38);
+		}
+
+		> .button
+		{
+			grid-row-start     : 4;
+			margin-block-start : toRem(41);
+		}
+
+		> ul
+		{
+			display            : flex;
+			justify-self       : stretch;
+			justify-content    : space-around;
+			grid-row-start     : 5;
+			margin-block-start : toRem(72);
+		}
+
+		> ul > li + li
+		{
+			margin-block-start : unset;
+		}
+
+		picture
+		{
+			grid-row-end      : span 4;
+			grid-column-start : 2;
+			grid-column-end   : span 1;
+			z-index           : -1;
+		}
+	}
+
+
+	// Main ---------------------------------------------------------------------
+
+	main
+	{
+		padding-inline : toRem(40);
+	}
+
+	main > div
+	{
+		max-inline-size     : unset;
+		padding-inline      : toRem(58);
+		padding-block-start : toRem(255);
+		margin-block-start  : toRem(274);
+	}
+
+
+	// Footer -------------------------------------------------------------------
+
+	footer
+	{
+		display             : flex;
+		justify-content     : space-between;
+		padding-inline      : toRem(40);
+		padding-block-start : toRem(535);
+		padding-block-end   : toRem(73);
+		margin-block-start  : toRem(-464);
+
+		> * + *
+		{
+			margin-block-start : unset;
+		}
+
+		> nav
+		{
+			position           : relative;
+			inset-block-start  : toRem(8);
+			margin-block-start : unset;
+		}
+
+		> nav > ul > li:first-child
+		{
+			margin-inline-start : unset;
+		}
+
+		> nav > ul > li:last-child
+		{
+			margin-inline-end : unset;
+		}
+	}
+
+
 	// Utilities ----------------------------------------------------------------
 
 	.button
 	{
-		font-size      : toRem(16);
-		line-height    : ratio(32, 16);
-		letter-spacing : toRem(-0.16);
-		padding-inline : toRem(24);
+		font-size           : toRem(16);
+		line-height         : ratio(32, 16);
+		letter-spacing      : toRem(-0.16);
+		padding-block-start : toRem(10);
+		padding-block-end   : toRem(12);
+		padding-inline      : toRem(24);
 	}
 }
 
