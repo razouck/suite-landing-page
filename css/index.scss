@@ -234,6 +234,11 @@ main > div
 		transform : scale(0.76);
 	}
 
+	.heading-i
+	{
+		margin-block-start : toRem(21);
+	}
+
 	.quote
 	{
 		margin-block-start : toRem(38);
@@ -242,11 +247,6 @@ main > div
 	figcaption
 	{
 		margin-block-start : toRem(40);
-	}
-
-	.heading-i
-	{
-		margin-block-start : toRem(21);
 	}
 }
 
@@ -558,6 +558,15 @@ footer
 		line-height : ratio(32, 18);
 	}
 
+	header,
+	main,
+	footer
+	{
+		max-inline-size : toRem(1440);
+		padding-inline  : toRem(164);
+		margin-inline   : auto;
+	}
+
 
 	// Typography ---------------------------------------------------------------
 
@@ -582,8 +591,9 @@ footer
 
 	.heading-i
 	{
-		font-size   : toRem(40);
-		line-height : ratio(48, 40);
+		font-size      : toRem(48);
+		line-height    : ratio(56, 48);
+		letter-spacing : toRem(-0.5);
 	}
 
 	.quote
@@ -591,5 +601,108 @@ footer
 		font-size      : toRem(20);
 		line-height    : ratio(35, 20);
 		letter-spacing : toRem(0.11);
+	}
+
+
+	// Header -------------------------------------------------------------------
+
+	header
+	{
+		grid-template-columns : 237fr 175fr 143fr;
+
+		nav
+		{
+			grid-column-end     : span 3;
+			padding-block-start : toRem(50);
+			margin-block-end    : toRem(65);
+		}
+
+		h1
+		{
+			margin-block-start : toRem(103);
+		}
+
+		p
+		{
+			margin-block-start : toRem(40);
+		}
+
+		> .button
+		{
+			margin-block-start : toRem(52);
+		}
+
+		> ul
+		{
+			display            : unset;
+			justify-self       : unset;
+			justify-content    : unset;
+			grid-row-start     : 2;
+			grid-row-end       : span 3;
+			grid-column-start  : 3;
+			text-align         : unset;
+			margin-inline      : auto;
+			margin-block-start : toRem(106);
+		}
+
+		> ul > li + li
+		{
+			margin-block-start : toRem(63);
+		}
+
+		.curve
+		{
+			inset-inline-start : toRem(300);
+			transform          : unset;
+		}
+	}
+
+
+	// Main ---------------------------------------------------------------------
+
+	main > div
+	{
+		text-align           : unset;
+		padding-inline-start : toRem(634);
+		padding-inline-end   : toRem(125);
+		padding-block-start  : toRem(88);
+		padding-block-end    : toRem(87);
+		margin-block-start   : toRem(199);
+		background-position  : 7% 500%;
+
+		picture
+		{
+			inset-inline-start : toRem(122);
+			inset-block-start  : unset;
+			inset-block-end    : 0;
+			pointer-events     : none;
+		}
+
+		.arrow
+		{
+			position           : absolute;
+			inset-inline-start : toRem(525);
+			inset-block-start  : toRem(250);
+			transform          : unset;
+		}
+
+		.heading-i
+		{
+			margin-block-start : unset;
+		}
+
+		.quote
+		{
+			margin-block-start : toRem(41);
+		}
+	}
+
+
+	// Footer -------------------------------------------------------------------
+
+	footer
+	{
+		padding-block-start : toRem(359);
+		margin-block-start  : toRem(-265);
 	}
 }

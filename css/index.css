@@ -174,14 +174,14 @@ main > div picture {
 main > div .arrow {
   transform: scale(0.76);
 }
+main > div .heading-i {
+  margin-block-start: 1.3125rem;
+}
 main > div .quote {
   margin-block-start: 2.375rem;
 }
 main > div figcaption {
   margin-block-start: 2.5rem;
-}
-main > div .heading-i {
-  margin-block-start: 1.3125rem;
 }
 
 footer {
@@ -382,6 +382,13 @@ footer > nav > ul > li:last-child {
     font-size: 1.125rem;
     line-height: 1.7777777778;
   }
+  header,
+  main,
+  footer {
+    max-inline-size: 90rem;
+    padding-inline: 10.25rem;
+    margin-inline: auto;
+  }
   .body {
     letter-spacing: 0.00625rem;
   }
@@ -396,13 +403,80 @@ footer > nav > ul > li:last-child {
     letter-spacing: -0.03125rem;
   }
   .heading-i {
-    font-size: 2.5rem;
-    line-height: 1.2;
+    font-size: 3rem;
+    line-height: 1.1666666667;
+    letter-spacing: -0.03125rem;
   }
   .quote {
     font-size: 1.25rem;
     line-height: 1.75;
     letter-spacing: 0.006875rem;
+  }
+  header {
+    grid-template-columns: 237fr 175fr 143fr;
+  }
+  header nav {
+    grid-column-end: span 3;
+    padding-block-start: 3.125rem;
+    margin-block-end: 4.0625rem;
+  }
+  header h1 {
+    margin-block-start: 6.4375rem;
+  }
+  header p {
+    margin-block-start: 2.5rem;
+  }
+  header > .button {
+    margin-block-start: 3.25rem;
+  }
+  header > ul {
+    display: unset;
+    justify-self: unset;
+    justify-content: unset;
+    grid-row-start: 2;
+    grid-row-end: span 3;
+    grid-column-start: 3;
+    text-align: unset;
+    margin-inline: auto;
+    margin-block-start: 6.625rem;
+  }
+  header > ul > li + li {
+    margin-block-start: 3.9375rem;
+  }
+  header .curve {
+    inset-inline-start: 18.75rem;
+    transform: unset;
+  }
+  main > div {
+    text-align: unset;
+    padding-inline-start: 39.625rem;
+    padding-inline-end: 7.8125rem;
+    padding-block-start: 5.5rem;
+    padding-block-end: 5.4375rem;
+    margin-block-start: 12.4375rem;
+    background-position: 7% 500%;
+  }
+  main > div picture {
+    inset-inline-start: 7.625rem;
+    inset-block-start: unset;
+    inset-block-end: 0;
+    pointer-events: none;
+  }
+  main > div .arrow {
+    position: absolute;
+    inset-inline-start: 32.8125rem;
+    inset-block-start: 15.625rem;
+    transform: unset;
+  }
+  main > div .heading-i {
+    margin-block-start: unset;
+  }
+  main > div .quote {
+    margin-block-start: 2.5625rem;
+  }
+  footer {
+    padding-block-start: 22.4375rem;
+    margin-block-start: -16.5625rem;
   }
 }
 
