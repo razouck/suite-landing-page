@@ -198,7 +198,10 @@ header
 
 	.curve
 	{
-		position : absolute;
+		position           : absolute;
+		inset-inline-start : toRem(105);
+		inset-block-start  : toRem(125);
+		transform          : scale(0.54);
 	}
 }
 

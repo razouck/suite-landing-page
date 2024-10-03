@@ -148,6 +148,9 @@ header .heading-s {
 }
 header .curve {
   position: absolute;
+  inset-inline-start: 6.5625rem;
+  inset-block-start: 7.8125rem;
+  transform: scale(0.54);
 }
 
 main > div {
