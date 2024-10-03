@@ -468,7 +468,7 @@ footer > nav > ul > li:last-child {
   main > div .arrow {
     position: absolute;
     inset-inline-start: 32.8125rem;
-    inset-block-start: 15.625rem;
+    inset-block-start: 15.75rem;
     transform: unset;
   }
   main > div .heading-i {
