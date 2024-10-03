@@ -316,7 +316,7 @@ footer
 	}
 }
 
-@property --i
+@property --j
 {
 	syntax        : "<number>";
 	initial-value : 0;
@@ -325,9 +325,9 @@ footer
 
 .button.primary
 {
-	--i              : 0;
-	--full           : calc((1 - var(--i)) * 100%);
-	--half           : calc(49% + (1 - var(--i)) * 51%);
+	--j              : 0;
+	--full           : calc((1 - var(--j)) * 100%);
+	--half           : calc(49% + (1 - var(--j)) * 51%);
 
 	font-size        : toRem(18);
 	line-height      : ratio(32, 18);
@@ -337,11 +337,11 @@ footer
 	color            : var(--seasalt);
 	border           : none;
 	background-image : linear-gradient(150deg, var(--oxford-blue) var(--full), var(--medium-slate-blue) var(--full), var(--steel-pink) var(--half), var(--sandy-brown) 100%);
-	transition       : --i 150ms ease-in-out;
+	transition       : --j 150ms ease-in-out;
 
 	&:active
 	{
-		--i : 1;
+		--j : 1;
 	}
 }
 
@@ -349,18 +349,6 @@ footer
 .lighter
 {
 	color : var(--paynes-gray);
-}
-
-
-// Animation --------------------------------------------------------------------
-
-@media (prefers-reduced-motion : reduce)
-{
-	*
-	{
-		animation           : none !important;
-		transition-duration : 0s !important;
-	}
 }
 
 
@@ -707,5 +695,70 @@ footer
 	{
 		padding-block-start : toRem(359);
 		margin-block-start  : toRem(-265);
+	}
+
+
+	// Animation --------------------------------------------------------------------
+
+	@media (prefers-reduced-motion : reduce)
+	{
+		*
+		{
+			animation           : none !important;
+			transition-duration : 0s !important;
+		}
+	}
+
+	.animate
+	{
+		--duration           : 450ms;
+		--stagger            : 0.4;
+		--delay              : calc(var(--i) * var(--stagger) * var(--duration));
+
+		animation-duration   : var(--duration);
+		animation-delay      : var(--delay);
+		animation-play-state : var(--play-state, running);
+	}
+
+	.slide-in
+	{
+		animation-timing-function : ease-in-out;
+		animation-fill-mode       : both;
+		animation-name            : slide-in;
+	}
+
+	.slide-in.reverse
+	{
+		animation-name : slide-in-reverse;
+	}
+
+	@keyframes slide-in
+	{
+		from
+		{
+			opacity   : 0;
+			transform : translateX(-3vw);
+		}
+
+		to
+		{
+			opacity   : 1;
+			transform : translateX(0);
+		}
+	}
+
+	@keyframes slide-in-reverse
+	{
+		from
+		{
+			opacity   : 0;
+			transform : translateX(3vw);
+		}
+
+		to
+		{
+			opacity   : 1;
+			transform : translateX(0);
+		}
 	}
 }
