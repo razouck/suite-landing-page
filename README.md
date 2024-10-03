@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://razouck.github.io/suite-landing-page/](https://razouck.github.io/suite-landing-page/)
 
 ## My process
 
@@ -44,4 +44,4 @@ Users should be able to:
 ## Author
 
 - GitHUb - [@razouck](https://github.com/razouck)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/razouck)
+- Frontend Mentor - [@razouck](https://www.frontendmentor.io/profile/razouck)
